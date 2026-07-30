@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silicon (Si) — The Element of the Digital Age</title>
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-card: #131a2b;
+      --bg-card-hover: #1a243b;
+      --accent-cyan: #00f0ff;
+      --accent-blue: #3a86ff;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border-color: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0 20px;
+    }
+
+    header {
+      max-width: 1000px;
+      margin: 60px auto 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 40px;
+    }
+
+    .element-badge {
+      display: inline-block;
+      border: 2px solid var(--accent-cyan);
+      border-radius: 12px;
+      padding: 16px 28px;
+      margin-bottom: 20px;
+      background: rgba(0, 240, 255, 0.05);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    }
+
+    .atomic-number {
+      font-size: 0.9rem;
+      color: var(--accent-cyan);
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .element-symbol {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      background: linear-gradient(90deg, #fff, var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .element-name {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto 80px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
+      background-color: var(--bg-card-hover);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 20px;
+      background: var(--accent-cyan);
+      border-radius: 4px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .stat-list {
+      list-style: none;
+      border-top: 1px solid var(--border-color);
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+
+    .stat-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stat-list li:last-child {
+      border-bottom: none;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: #fff;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .step {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .step-number {
+      color: var(--accent-cyan);
+      font-weight: bold;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .step-title {
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 0.85rem;
+      margin-bottom: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="element-badge">
+      <div class="atomic-number">14</div>
+      <div class="element-symbol">Si</div>
+      <div class="element-name">Silicon</div>
+    </div>
+    <h1>The Backbone of Modern Technology</h1>
+    <p class="subtitle">
+      A Group 14 tetravalent metalloid that bridges the gap between conductors and insulators, enabling integrated circuits, photovoltaics, and computing.
+    </p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <!-- Fundamental Atomic Properties -->
+      <div class="card">
+        <h2>Atomic Profile</h2>
+        <p>
+          Silicon sits in Group 14 of the periodic table, directly below carbon. Like carbon, it forms four covalent bonds, adopting a diamond-cubic crystal lattice in its solid state.
+        </p>
+        <ul class="stat-list">
+          <li><span class="stat-label">Atomic Number</span> <span class="stat-value">14</span></li>
+          <li><span class="stat-label">Standard Atomic Weight</span> <span class="stat-value">28.085 u</span></li>
+          <li><span class="stat-label">Electron Configuration</span> <span class="stat-value">[Ne] 3s² 3p²</span></li>
+          <li><span class="stat-label">Electronegativity</span> <span class="stat-value">1.90 (Pauling scale)</span></li>
+          <li><span class="stat-label">Density (at room temp)</span> <span class="stat-value">2.3290 g/cm³</span></li>
+          <li><span class="stat-label">Melting Point</span> <span class="stat-value">1414 °C (1687 K)</span></li>
+        </ul>
+      </div>
+
+      <!-- Semiconductor Physics -->
+      <div class="card">
+        <h2>Semiconductor Physics</h2>
+        <p>
+          In its pure (intrinsic) crystalline form, silicon is a mediocre conductor. Its valence band is full and its conduction band is empty, separated by an energy gap.
+        </p>
+        <ul class="stat-list">
+          <li><span class="stat-label">Bandgap Energy (Eg)</span> <span class="stat-value">1.12 eV (300 K)</span></li>
+          <li><span class="stat-label">Bandgap Type</span> <span class="stat-value">Indirect Bandgap</span></li>
+          <li><span class="stat-label">Electron Mobility</span> <span class="stat-value">~1400 cm²/(V·s)</span></li>
+          <li><span class="stat-label">Hole Mobility</span> <span class="stat-value">~450 cm²/(V·s)</span></li>
+          <li><span class="stat-label">Crystal Lattice</span> <span class="stat-value">Diamond Cubic (a = 5.43 Å)</span></li>
+          <li><span class="stat-label">Electrical Classification</span> <span class="stat-value">Metalloid / Semiconductor</span></li>
+        </ul>
+      </div>
+
+      <!-- Doping & Electronics -->
+      <div class="card full-width">
+        <h2>Doping: Controlling Electrical Conductivity</h2>
+        <p>
+          Pure silicon is rarely used in active electronic devices. By deliberately introducing trace impurity atoms into the crystalline lattice—a process known as <strong>doping</strong>—engineers can manipulate its electrical conductivity by several orders of magnitude.
+        </p>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">n-Type Doping</div>
+            <div class="step-title">Electron Donors (Group 15)</div>
+            <p>
+              Introducing pentavalent atoms like <strong>Phosphorus (P)</strong> or <strong>Arsenic (As)</strong> adds a fifth valence electron that does not participate in covalent bonding, creating free negative charge carriers.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">p-Type Doping</div>
+            <div class="step-title">Electron Acceptors (Group 13)</div>
+            <p>
+              Introducing trivalent atoms like <strong>Boron (B)</strong> or <strong>Gallium (Ga)</strong> leaves a missing electron in the lattice bond—a positive "hole" that moves through the crystal under an electric field.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">p-n Junction</div>
+            <div class="step-title">The Foundation of Logic</div>
+            <p>
+              Joining p-type and n-type silicon creates a depletion region that allows current to flow in only one direction, forming diodes, transistors, and MOSFETs that power digital processors.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Czochralski Process -->
+      <div class="card full-width">
+        <h2>From Quartzite Sand to Single-Crystal Wafers</h2>
+        <p>
+          Silicon is the second most abundant element in Earth's crust (by mass, after oxygen), occurring primarily as silicon dioxide (SiO₂) in sand and quartz. Transforming it into high-performance microchips requires extreme chemical and metallurgical purification.
+        </p>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">Step 1</div>
+            <div class="step-title">Carbothermic Reduction</div>
+            <p>
+              Quartzite is heated with carbon in an electric arc furnace at ~1900 °C to strip away oxygen, yielding Metallurgical-Grade Silicon (~98–99% pure).
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">Step 2</div>
+            <div class="step-title">Siemens Process</div>
+            <p>
+              Silicon is converted to gas (trichlorosilane, SiHCl₃) and distilled to remove impurities, producing Polycrystalline Electronic-Grade Silicon (99.9999999% pure — "nine nines").
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">Step 3</div>
+            <div class="step-title">Czochralski Crystal Growth</div>
+            <p>
+              A seed crystal is dipped into molten silicon at 1425 °C and slowly pulled upward while rotating, forming a single-crystal monocrystalline ingot (boule).
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">Step 4</div>
+            <div class="step-title">Wafer Slicing & Polishing</div>
+            <p>
+              The ingot is sliced with diamond saws into thin discs (typically 300 mm wide), chemically etched, and polished to mirror flatness for integrated circuit fabrication.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chemical Forms & Applications -->
+      <div class="card">
+        <h2>Silicates & Ceramics</h2>
+        <p>
+          Over 90% of Earth's crust is composed of silicate minerals. Silicon dioxide (SiO₂) is the primary constituent of conventional glass, optical fibers, and structural ceramics, valued for thermal stability and chemical hardness.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Silicones & Polymers</h2>
+        <p>
+          When silicon is bonded with oxygen, carbon, and hydrogen, it forms synthetic polymers known as silicones (polysiloxanes). These elastomers offer high thermal resistance and are widely used in lubricants, medical implants, and sealants.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Silicon Reference Sheet &bull; Solid-State Chemistry & Semiconductor Physics</p>
+  </footer>
+
+</body>
+</html>
